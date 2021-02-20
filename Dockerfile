@@ -9,7 +9,7 @@ ENV VERSION=1.11
 RUN apk add build-base py-pip jpeg-dev zlib-dev gcc g++ make perl bzip2-dev xz-dev
 
 # Download & install
- RUN wget https://github.com/samtools/samtools/releases/download/VERSION/samtools-VERSION.tar.bz2 \
+ RUN wget https://github.com/samtools/samtools/releases/download/$VERSION/samtools-$VERSION.tar.bz2 \
   && tar -xvjf samtools-$VERSION.tar.bz2 \
   && cd samtools-$VERSION \
   && ./configure --prefix=/usr/bin --without-curses \
