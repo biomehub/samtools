@@ -13,8 +13,8 @@ RUN apk add build-base py-pip jpeg-dev zlib-dev gcc g++ make perl bzip2-dev xz-d
   && tar -xvjf samtools-$VERSION.tar.bz2 \
   && cd samtools-$VERSION \
   && ./configure --without-curses \
-  && mv bin/* /usr/bin \
   && make \
   && make install \
+  && mv bin/* /usr/bin \
   && cd / \
   && rm -r /samtools-$VERSION
