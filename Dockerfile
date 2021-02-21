@@ -15,8 +15,5 @@ RUN apk add build-base py-pip jpeg-dev zlib-dev gcc g++ make perl bzip2-dev xz-d
   && ./configure --without-curses \
   && make \
   && make install \
-  && mv sam2vcf.pl /usr/bin \
-  && mv samtools /usr/bin \
-  && mv samtools.pl /usr/bin \
   && cd / \
   && rm -r /samtools-$VERSION
