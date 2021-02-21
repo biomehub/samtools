@@ -12,7 +12,8 @@ RUN apk add build-base py-pip jpeg-dev zlib-dev gcc g++ make perl bzip2-dev xz-d
  RUN wget https://github.com/samtools/samtools/releases/download/$VERSION/samtools-$VERSION.tar.bz2 \
   && tar -xvjf samtools-$VERSION.tar.bz2 \
   && cd samtools-$VERSION \
-  && ./configure --prefix=/usr/bin --without-curses \
+  && ./configure --without-curses \
+  && mv bin/* /usr/bin \
   && make \
   && make install \
   && cd / \
